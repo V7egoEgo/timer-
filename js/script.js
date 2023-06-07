@@ -1,12 +1,11 @@
-
-
 let start1 = document.querySelector('.clock');
 let hoursText = document.querySelector('.hour');
 let minText = document.querySelector('.min');
 let secText = document.querySelector('.sec');
 function start()
 {
-	startInterval = setInterval(function(){
+startInterval = setInterval(function()
+{
 	let dataGG = new Date();
 	const hours = dataGG.getHours();
 	const min	= dataGG.getMinutes();
@@ -19,12 +18,12 @@ function start()
 	console.log(sec);
 	},1000);
 };
-
-
-function stop(){
+function stop()
+{
 	minText.textContent = '00';
 	secText.textContent = '00';
 	hoursText.textContent = '00';
 	clearInterval(startInterval);
-	intervalId = null; 
+	intervalId = null;
 }
+
